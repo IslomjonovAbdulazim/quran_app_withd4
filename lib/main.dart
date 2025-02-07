@@ -20,6 +20,16 @@ class QuranApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
+      builder: (context, child) => MediaQuery(
+        data: MediaQuery.of(context).copyWith(
+          textScaler: TextScaler.noScaling,
+          boldText: false,
+        ),
+        child: ScrollConfiguration(
+          behavior: const ScrollBehavior(),
+          child: child ?? const Scaffold(),
+        ),
+      ),
     );
   }
 }
