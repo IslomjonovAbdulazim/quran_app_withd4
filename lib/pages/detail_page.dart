@@ -144,7 +144,12 @@ class _DetailPageState extends State<DetailPage> {
                         height: 45,
                         width: 45,
                         child: currentPlaying == ayah.id && isLoading
-                            ? CircularProgressIndicator.adaptive()
+                            ? Padding(
+                                padding: const EdgeInsets.all(12),
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                ),
+                              )
                             : CupertinoButton(
                                 padding: EdgeInsets.zero,
                                 onPressed: () {
@@ -168,7 +173,8 @@ class _DetailPageState extends State<DetailPage> {
                     duration: Duration(milliseconds: 300),
                     padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                     decoration: BoxDecoration(
-                      color: currentPlaying == ayah.id ? Color(0xff121931) : null,
+                      color:
+                          currentPlaying == ayah.id ? Color(0xff121931) : null,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Text(
