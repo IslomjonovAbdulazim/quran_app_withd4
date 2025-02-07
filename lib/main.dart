@@ -4,7 +4,12 @@ import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 
 void main() {
-  runApp(DevicePreview(builder: (_) => QuranApp()));
+  runApp(
+    DevicePreview(
+      enabled: false,
+      builder: (_) => QuranApp(),
+    ),
+  );
 }
 
 class QuranApp extends StatelessWidget {

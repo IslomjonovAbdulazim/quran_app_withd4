@@ -6,7 +6,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.6.1
+  sdk: ^3.3.1
 
 dependencies:
   flutter:
@@ -15,6 +15,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_fonts: ^6.2.1
   device_preview: ^1.2.0
+  just_audio: ^0.9.46
 
 dev_dependencies:
   flutter_test:
